@@ -1190,7 +1190,7 @@ namespace Swashbuckle.AspNetCore.SwaggerGen.Test
 
             var schema = schemaRepository.Schemas[referenceSchema.Reference.Id];
             Assert.Equal(JsonSchemaTypes.String, schema.Type);
-            Assert.Equal(["\"Value1\"", "\"Value2\"", "\"X\""], schema.Enum.Select(openApiAny => openApiAny.ToJson()));
+            Assert.Equal(["\"Value1\"", "\"Value2\"", "\"X-foo\""], schema.Enum.Select(openApiAny => openApiAny.ToJson()));
         }
 
         [Fact]

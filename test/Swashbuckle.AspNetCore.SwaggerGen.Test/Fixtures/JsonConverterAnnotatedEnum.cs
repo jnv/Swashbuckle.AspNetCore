@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace Swashbuckle.AspNetCore.SwaggerGen.Test
 {
@@ -7,6 +8,7 @@ namespace Swashbuckle.AspNetCore.SwaggerGen.Test
     {
         Value1 = 2,
         Value2 = 4,
+        [EnumMember(Value = "X-foo")]
         X = 8
     }
 }
